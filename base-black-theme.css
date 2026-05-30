@@ -1,0 +1,118 @@
+/* BASE BLACK THEME – RESET & DEFAULTS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* Force z-index: 0 on all elements by default */
+  z-index: 0;
+}
+
+/* Remove default margins and paddings */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Smooth scrolling for anchor links (optional but common) */
+  scroll-behavior: smooth;
+  /* Prevent layout shifts from scrollbars on all viewports */
+  overflow-x: hidden;
+}
+
+body {
+  /* Black theme core */
+  background-color: #000000;
+  color: #ffffff;
+  
+  /* Typography – readable & responsive */
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 100%; /* 1rem = 16px baseline */
+  line-height: 1.5;
+  
+  /* Ensure full viewport coverage */
+  min-height: 100vh;
+  min-height: 100dvh; /* dynamic viewport for mobile */
+  
+  /* Optimize for all platforms */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  /* Prevent unwanted white flash on some mobile browsers */
+  background-attachment: fixed;
+}
+
+/* Reset link colors to fit black theme */
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Make images responsive & avoid overflow */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form elements inherit theme & fonts */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background-color: #111111; /* subtle contrast for inputs */
+  border: 1px solid #333333;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+button {
+  background-color: #222222;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333333;
+}
+
+/* Remove default focus outlines – replace with accessible custom style */
+:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Ensure all scrollbars are dark (WebKit only – fallback is fine) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* Utility: force any element with higher z-index back to 0 if needed */
+.force-z-index-0 {
+  z-index: 0 !important;
+}
