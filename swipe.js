@@ -1,15 +1,9 @@
 
-
-
-
-
-
-
 let touchStartX = 0;
 let touchEndX = 0;
 
 /* Change these when you add more pages */
-const MIN_PAGE = 97;
+const MIN_PAGE = 95;
 const MAX_PAGE = 101;
 
 document.addEventListener('touchstart', (e) => {
